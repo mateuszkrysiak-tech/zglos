@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zgłoś – pomoc zwierzętom</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Zgłoś zwierzę</h1>
+    </header>
+
+    <div id="map"></div>
+
+    <button id="reportBtn">Zgłoś zwierzę</button>
+
+    <!-- Formularz zgłoszenia -->
+    <div id="reportForm" class="hidden">
+        <h2>Zgłoszenie</h2>
+
+        <label>Gatunek:</label>
+        <select id="species">
+            <option value="kot">Kot</option>
+            <option value="pies">Pies</option>
+            <option value="dzik">Dzik</option>
+            <option value="sarna">Sarna</option>
+            <option value="lis">Lis</option>
+            <option value="jez">Jeż</option>
+            <option value="ptak">Ptak</option>
+        </select>
+
+        <label>Opis sytuacji:</label>
+        <textarea id="description"></textarea>
+
+        <button id="sendReport">Wyślij zgłoszenie</button>
+        <button id="closeForm">Zamknij</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
